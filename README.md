@@ -3,7 +3,8 @@ Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycke
 
 ## Inlämning
 * Code review är efter lunch fredagen den 12/6.
-* Senaste tiden för inlämning är kl. 8.00 fredagen den 12/6. Det som kommer efter det bedömmer vi inte om det inte finns rimliga skäl. Ni lämnar in genom att ni skriver in en länk till erat Github-repo i ett formulär ni kommer få. OBS: Glöm ej att göra repot publikt!
+* Senaste tiden för inlämning är kl. 8.00 fredagen den 12/6. Det som kommer efter det bedömmer vi inte om det inte finns rimliga skäl.
+* Ni lämnar in genom att ni skriver in en länk till ert Github-repo i ett formulär ni kommer få. OBS: Glöm ej att göra repot publikt!
 * När ni lämnat in bedömmer vi koden i det skick den är vid deadline, commits efter detta kommer ignoreras.
   
 ## Krav
@@ -13,38 +14,35 @@ Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycke
 * Sidan ska vara responsiv i övergångarna mellan mobil-tablet-desktop
 * Formulär och semantik ska vara tillgängligt (använd WAVE eller dylikt för att testa)
 * Koden ska vara välformatterad och tydligt strukturerad med en genomtänkt namngivning på klasser samt ev kommentarer
-* Inga bibliotek som react, bootstrap, tailwind eller dylikt får användas, endast .CSS och .HTML (ev js).
-* Om ni lånar en reset, flow-util, visually-hidden eller dylikt som inte finns i grundkoden - ange källa som kommentar i er kod.
+* Inga bibliotek som react, bootstrap, tailwind eller dylikt får användas, endast .CSS och .HTML (ev js för hamburgermeny om ni vill göra den, inget annat).
+* Om ni lånar en reset, utility eller dylikt som inte finns i grundkoden - ange källa som kommentar i er kod.
 * Var beredd på att förklara er kod muntligt så se till att ni förstår vad ni gör om ni rådfrågar andra/AI.
 
 ## Extra
 Följande är extra och sådant ni inte måste ha med om ni inte hinner/vill/kan
-
-* Galleriet högst upp kan ha en enklare design som i tablet-läget även på desktop
-* Olika färger på "tags" behövs inte om ni inte vill, använd bara den gröna accent-color på alla i så fall.
-* Använd gärna en diskret transition på hover/focus-visible om ni vill.
+* De tre bilderna högst upp kan ha en enklare design, t ex samma design/storlek i alla lägen.
+* Hjärta/bookmark/like-knappen på korten är bara om ni vill och hinner.
+* Olika färger på "tags" behövs inte om ni inte vill, använd bara en på alla om ni vill förenkla.
+* Använd gärna en diskret transition på hover/focus-visible på knappar och länkar om ni vill.
 * Hamburgar-menyn behöver ni bara göra som en ikon, all annan funktionalitet är superextra och inget som vi förväntar oss att ni gör!
   
 ## Övriga resurser
-* Använd gärna avatarer från [https://avatar-placeholder.iran.liara.run/avatars](https://avatar-placeholder.iran.liara.run/avatars) eller den svg som finns i projektet.
 * Använd gärna bilder från [https://picsum.photos/](https://picsum.photos/). Vill ni använda andra är det ok, men se till att det ser bra ut i sammanhanget.
 * Vill ni ändra texter och lägga in egen info är det också ok, bara det fyller samma typ av funktion och inte ändrar sidans utseende bortom innehållet.
-* SVG finns i mappen assets/Images och kan användas antingen som vanliga bilder eller direkt inkopierade som HTML i koden. Om ni vill ändra färger med CSS på SVG måste de vara inkopierade inline. Se här för hur man kan ändra färger med CSS: https://nucleoapp.com/blog/post/change-svg-color-css
-* Länkarna ska vara semantiska men behöver inte gå någonstans (använd href="#")
+* Alla ikoner ligger som svg högst upp i html-filen. Om ni vill ändra färger med CSS på SVG måste de vara inkopierade inline. Se här för hur man kan ändra färger med CSS: https://nucleoapp.com/blog/post/change-svg-color-css
+* Länkarna ska vara semantiska men behöver inte gå någonstans (använd href="#"). Om ni vill kan ni använda material icons eller dylikt istället för svg (https://fonts.google.com/icons).
   
 ## Design
-### Desktop
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+Bilderna för designen ligger under Design-mappen och innehåller bilder för de olika vyerna.
 
+### Desktop
 ![Desktop](Design/evently_desktop.png "Desktop")
 
 ### Tablet
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
 
 ![Tablet](Design/evently_tablet.png "Tablet")
 
 ### Mobile
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
 
 ![Mobile](Design/evently_mobile.png "Mobile")
 
@@ -55,7 +53,7 @@ Kl. 13.05 Kort gemensamt möte.
 
 Kl 13.15 Möten i grupperna.
 
-Kl 14.45 Samilng i helklass.
+Kl 14.30 Samilng i helklass.
 
 I grupp:
 
