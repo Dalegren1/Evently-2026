@@ -165,10 +165,11 @@ p {
 .header {
     display: flex;
     align-items: center;
-    gap:2rem;
+    padding: 1.5rem;
     justify-content: space-between;
 }
 
+/* Button-wrapper */
 .header__actions {
     display: flex;
     align-items: center;
@@ -179,10 +180,63 @@ p {
     display: flex;
     align-items: center;
     gap: 2rem;
+    transition: opacity 0.2s ease;
 }
 
+.nav__link:hover {
+    opacity: 0.6s;
+}
+
+/* Navbar Logo */
 .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+
+/* ==========================================
+    Hero Section
+   ========================================== */
+
+.hero {
+    padding: 7.5rem; /* Placeholder padding, fixa senare */
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem 5rem;
+    flex-wrap: wrap;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.hero__text, /* Placeholder bild, fixa senare */
+.hero__image img {
+    width: clamp(200px, 80vw, 480px);
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+
+
+ /* Navbar Logo */
+ .hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} 
