@@ -158,6 +158,16 @@ p {
     border: 0;
 }
 
+
+/* ==========================================
+    Ska flyttas till rätt kategori senare..
+   ========================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}  
+
 /* ==========================================
     Navbar
    ========================================== */
@@ -240,3 +250,94 @@ p {
     align-items: center;
     gap: 1rem;
 } 
+
+/* ==========================================
+    Filter Section
+   ========================================== */
+
+.filter-form {
+    background-color: var(--purple-200);
+    padding: 2rem 0;
+}   
+
+/* Flytta från Category senare... får fixa något smartare sen */
+label {
+    padding: 0 0 0.5rem;
+}
+
+.filter-form .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.filter-form__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.filter-form__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem; /* Koppla/skapa en variabel senare */
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.filter-form__group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 12rem;
+}
+
+/* Styla som en sekundär-knapp senare */
+.filter-form__btn {
+    align-self: flex-end;
+    white-space: nowrap;
+}
+
+/* ==========================================
+    Benefits Section
+   ========================================== */
+
+.benefits {
+    background-color: var(--mint-50);
+    padding: 2rem 0;
+}
+
+.benefits .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.benefits__grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.benefits__item {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.benefits__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.benefits__icon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}

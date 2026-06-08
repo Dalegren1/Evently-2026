@@ -31,7 +31,7 @@
             <ul class="nav__list">
                 <li><a href="#hero" class="nav__link">Hem</a></li>
                 <li><a href="#event" class="nav__link">Evenemang</a></li>
-                <li><a href="#category" class="nav__link">Kategorier</a></li>
+                <li><a href="#filter" class="nav__link">Kategorier</a></li>
                 <li><a href="#about" class="nav__link">Om oss</a></li>
                 <li><a href="#footer" class="nav__link">Kontakt</a></li>     
             </ul>
@@ -55,7 +55,7 @@
     <main>
 
   <!-- ========================
-       Hero Flexbox
+       Hero 
   ========================= -->
   <section class="hero" id="hero">
     <div class="container">
@@ -81,17 +81,48 @@
             </div>
     </div>
   </section>
-        
-
-        
-
-        Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.
-
-        Utforska evenemang
-        Se helgens tips
 
   <!-- ========================
-       Filter
+       Filter 
+  ========================= -->
+  <section class="filter-form" id="filter">
+    <div class="container">
+        <div class="filter-form__header">
+            <h2>Hitta rätt evenemang</h2>
+        </div>
+    
+    <form class="filter-form__form">
+
+        <div class="filter-form__group">
+            <label for="search">Sökord</label>
+            <input type="text" id="search" placeholder="Sök på t.ex. konsert, yoga...">
+       </div>
+
+        <div class="filter-form__group">
+            <label for="category">Kategori</label>
+            <select id="category" name="category">
+                <option value="">Alla kategorier</option>
+                <option value="konsert">Konsert</option>
+                <option value="marknad">Marknad</option>
+                <option value="workshop">Workshop</option>
+                <option value="familj">Familj</option>
+                <option value="sport">Sport / Hälsa</option>
+            </select>
+        </div>
+    
+        <div class="filter-form__group">
+            <label for="date">Datum</label>
+            <input type="date" id="date" name="date"/>
+        </div>
+
+      <button type="submit" class="filter-form__btn">Sök evenemang</button>
+
+   </form> 
+
+  </section>
+
+  <!-- ========================
+       Recipes Grid 
   ========================= -->
         Hitta rätt evenemang
 
@@ -139,17 +170,65 @@
         Konsert
         3 juni
         Vasateatern, Göteborg
+  <!-- ========================
+       Benefits 
+  ========================= -->
 
+  <section class="benefits"><!-- Antar att inget från navbar ska gå til den direkt?-->
+    <div class="container">
 
-        Gratis & prisvärt
-        Hitta massor av evenemang som är gratis eller snälla mot plånboken.
+    
+        <div class="benefits__grid">
+            <article class="benefits__item">
+                <div class="benefits__icon">
+                  <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                          d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z">
+                      </path>
+                      <line x1="9" y1="5" x2="9" y2="19"></line>
+                  </svg>
+                </div>
+                <div class="benefits__content">
+                    <h3>Gratis & prisvärt</h3>
+                    <p>Hitta massor av evenemang som är gratis eller snälla mot plånboken</p>
+                </div>
+            </article>
+        
+            <article class="benefits__item">
+                <div class="benefits__icon">
+                  <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                       <circle cx="9" cy="7" r="4"></circle>
+                       <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                       <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                 </div>
+                    <div class="benefits__content">
+                       <h3>För alla åldrar</h3>
+                       <p>Aktiviteter för både stora och små - hitta något som passar hela familjer</p>
+                    </div>
+            </article>
+        
+            <article class="benefits__item">
+                <div class="benefits__icon">
+                 <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                     <circle cx="12" cy="10" r="3"></circle>
+                 </svg>
+                </div>
+                <div class="benefits__content">
+                 <h3>Nära dig</h3>
+                 <p>Upptäck evenemang i ditt område och stöd lokala arrangörer.</p>
+                 </div>
+            </article>
+        </div>
 
+        </div>
+  </section>  
 
-        För alla åldrar
-        Aktiviteter för både stora och små - hitta något som passar hela familjen.
-
-        Nära dig
-        Upptäck evenemang i ditt område och stöd lokala arrangörer.
     </main>
 
     <!-- Footer -->
