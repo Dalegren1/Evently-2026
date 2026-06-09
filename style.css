@@ -301,6 +301,120 @@ label {
     white-space: nowrap;
 }
 
+
+/* ==========================================
+    Events Grid
+========================================== */
+
+.events {
+    background: var(--white);
+    padding: 120px 16px; /* Styla om med en variabel senare */
+}
+
+.events__title {
+    /* Styla om med en color variabel senare */
+}
+
+.grid__link {
+    color: var(--purple-800)
+}
+
+.events__header {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.events .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 24px; 
+}
+
+/*-------------- Cards --------------*/
+
+.card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__tag {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card__date {
+
+}
+
+.card__location {
+
+}
+
+.card {
+  position: relative;  
+  border-radius: var(--radius); /*---- Fixa rätt variabel ----------------*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 24px rgba(0,0,0, 0.08);
+}
+
+.card__favourite {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 1;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.card__body {
+  padding: var(--gap); /*---- Fixa rätt variabel ----------------*/
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  justify-content: flex-start;
+}
+
+.card__title {
+  color: var(--color-dark-bg); /*---- Fixa rätt variabel ----------------*/
+}
+
+/*--------------------- Cards color, fixa!!------------------------------------------*/
+.card__tag--konsert  { background-color: #dbeafe; color: #1d4ed8; }
+.card__tag--marknad  { background-color: #dcfce7; color: #15803d; }
+.card__tag--workshop { background-color: #fef9c3; color: #a16207; }
+.card__tag--familj   { background-color: #fce7f3; color: #be185d; }
+.card__tag--sport    { background-color: #ede9fe; color: #6d28d9; }
+/*--------------------- Cards color, fixa!!------------------------------------------*/
+
 /* ==========================================
     Benefits Section
 ========================================== */

@@ -55,7 +55,7 @@
     <main>
 
   <!-- ========================
-       Hero 
+       Hero Flexbox
   ========================= -->
   <section class="hero" id="hero">
     <div class="container">
@@ -65,7 +65,7 @@
             <p class="hero__desc">
                 Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.
             </p>
-            <div class="hero__actions">
+            <div class="hero__actions"><!-- Döp om kanske? button wrapper skulle kunna vara en variabel som återanvänds senare -->
                 <a href="#" class="btn btn--primary">Utforska evenemang</a>
                 <a href="#" class="btn btn--secondary">Se helgens tips</a>
             </div>
@@ -83,7 +83,7 @@
   </section>
 
   <!-- ========================
-       Filter 
+       Filter Flexbox
   ========================= -->
   <section class="filter-form" id="filter">
     <div class="container">
@@ -122,58 +122,105 @@
   </section>
 
   <!-- ========================
-       Recipes Grid 
+       Events Grid 
   ========================= -->
-        Hitta rätt evenemang
+        <section class="events" id="Evenemang">
+        <div class="container">
+          <div class="events__header">
+            <h2 class="events__title">Populära evenemang</h2>
+            <a href="#" class="grid__link">Se alla evenemang →</a>
+          </div>
 
-        Sökord
-        Kategori
-        Alla kategorier
-        Konsert
-        Marknad
-        Workshop
-        Familj
-        Sport / Hälsa
-        Datum
-        Sök evenemang
+          <!-- Card 1 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--konsert">Konsert</span>
+              <time class="card__date">24 maj</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Indie Night med Nova Sun</h3>
+              <p class="card__location">Pustervik, Göteborg</p>
+            </div>
+          </article>
 
-        Populära evenemang
-        Se alla evenemang
+          <!-- Card 2 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--marknad">Marknad</span>
+              <time class="card__date">25 maj</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Vårmarknad i Slottsskogen</h3>
+              <p class="card__location">Slittsskogen, Göteborg</p>
+            </div>
+          </article>
 
-        Indie Night med Nova Sun
-        Konsert
-        24 maj
-        Pustervik, Göteborg
+          <!-- Card 3 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>            
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--workshop">Workshop</span>
+              <time class="card__date">27 maj</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Keramikkurs för nybörjare</h3>
+              <p class="card__location">Studio Lera, Göteborg</p>
+            </div>
+          </article>
 
-        Vårmarknad i Slottsskogen
-        Marknad
-        25 maj
-        Slottsskogen, Göteborg
+          <!-- Card 4 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--familj">Familj</span>
+              <time class="card__date">31 maj</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Barnteater: Den lilla sjöjungfrun</h3>
+              <p class="card__location">Folkteatern, Göteborg</p>
+            </div>
+          </article>
 
-        Keramikkurs för nybörjare
-        Workshop
-        27 maj
-        Studio Lera, Göteborg
+           <!-- Card 5 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--sport">Sport</span>
+              <time class="card__date">1 juni</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Morgonlöpning & frukost</h3>
+              <p class="card__location">Slottskogen, Göteborg</p>
+            </div>
+          </article>
+          
+          <!-- Card 6 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1555813456-94a3dd418cd3?"    alt="Amerikanska pannkakor"    loading="lazy"/>
+            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <div class="card__body">
+              <div class="card__meta">
+              <span class="card__tag card__tag--konsert">Konsert</span>
+              <time class="card__date">3 juni</time><!-- Kom ihåg att ange källa -->
+              </div>
+              <h3 class="card__title">Jazzkväll på Vasateatern</h3>
+              <p class="card__location">Vasateatern, Göteborg</p>
+            </div>
+          </article>
 
-        Barnteater: Den lilla sjöjungfrun
-        Familj
-        31 maj
-        Folkteatern, Göteborg
+        </div>
+      </section>
 
-        Morgonlöpning & frukost
-        Sport
-        1 juni
-        Slottsskogen, Göteborg
-
-
-        Jazzkväll på Vasateatern
-        Konsert
-        3 juni
-        Vasateatern, Göteborg
   <!-- ========================
-       Benefits 
+       Benefits Grid + Mediaquery
   ========================= -->
-
   <section class="benefits"><!-- Antar att inget från navbar ska gå til den direkt?-->
     <div class="container">
 
@@ -227,7 +274,9 @@
 
     </main>
 
-    <!-- Footer -->
+  <!-- ========================
+       Footer Flexbox
+  ========================= -->
     <footer>
         <div class="container">
             <div class="footer__grid">
