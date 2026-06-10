@@ -52,7 +52,7 @@
     /* Font weights */
     --weight-regular: 400;
     --weight-semibold: 600;
-    --weight-bold: 600;
+    --weight-bold: 700;
 
     }
 
@@ -60,10 +60,11 @@
 
     /* Button */
     .btn {
+       font-family: inherit; 
        display: inline-flex;
        align-items: center;
        justify-content: center;
-       padding: 1rem 2rem;
+       padding: 0.5rem 1.75rem;
        border-radius: var(--radius);
        font-weight: 600;
        font-size: 1rem;
@@ -90,10 +91,14 @@
 
     /*--------- Styling för Filter ----------------------*/
 
-    input, textarea, button, select {
+    input, select {
       font-family: inherit;
-      padding: 1rem;
+      padding: 0.65rem 1rem;
+      background-color: white;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
     }
+
 
 
 
@@ -179,7 +184,7 @@ p {
 
 /* Kevin Powell's content-grid layout pattern */
 .content-grid {
-    --padding-inline: calc(var(--spacing) * 6);
+    --padding-inline: calc(var(--spacing) * 6); 
     --content-max-width: 75rem;
     --breakout-max-width: 85rem;
 
@@ -233,12 +238,12 @@ p {
 /* ==========================================
     Navbar
    ========================================== */
-
-.header {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    justify-content: space-between;
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
 }
 
 /* Button-wrapper */
@@ -246,6 +251,21 @@ p {
     display: flex;
     align-items: center;
     gap:1rem;
+}
+
+.header__search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--purple-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.header__search:hover {
+  opacity: 0.6;
 }
 
 .nav__list {
@@ -256,11 +276,13 @@ p {
 }
 
 .nav__link:hover {
-    opacity: 0.6;
+    color: var(--purple-800);
 }
 
 /* Navbar Logo */
 .logo {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -271,13 +293,13 @@ p {
    ========================================== */
 
 .hero {
-    padding: 7.5rem; /* Placeholder padding, fixa senare */
+    padding: 3rem; /* Placeholder padding, fixa senare */
 }
 
 .hero .container {
     display: flex;
     align-items: center; /* Osäker på om den här verkligen behövs... */
-    gap: 2.5rem 5rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -294,7 +316,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.5rem;
     max-width: clamp(200px, 80vw, 480px);
 }
 
@@ -306,14 +328,13 @@ p {
 }
 
 .hero__label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12rem;
+    font-size: var(--text-sm); /*0.85rem*/
+    font-weight: var(--weight-semibold);
     text-transform: uppercase;
     background-color: var(--purple-100);
     color: var(--purple-800);
     border-radius: var(--radius);
-    padding: 0.2em 0.75em;
+    padding: 0.25rem 0.75rem;
 }
 
 
@@ -334,10 +355,14 @@ p {
     padding: 2rem 0;/* Saknar variabel */
 }   
 
-/* Flytta från Category senare... får fixa något smartare sen */
+/* Flytta från Category senare... får fixa något smartare sen ------------------------------------------------------------------------------*/
 label {
-    padding: 0 0 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
 }
+/* Flytta från Category senare... får fixa något smartare sen ------------------------------------------------------------------------------*/
 
 .filter-form .container {
     display: flex;
@@ -382,7 +407,7 @@ label {
 
 .events {
     background: var(--white);
-    padding: var(--section-padding);
+    padding: 2rem;
 }
 
 .events__title {
@@ -391,7 +416,7 @@ label {
 }
 
 .grid__link {
-    color: var(--purple-800);
+    color: var(--purple-600);
     font-size: var(--text-sm);
     font-weight: var(--weight-semibold);
 }
@@ -436,39 +461,41 @@ label {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--gray-300);
-  box-shadow: 0 4px 24px rgba(0,0,0, 0.08);
+  border: 1px solid var(--gray-100);
+  box-shadow: 0 4px 24px rgba(0,0,0, 0.08); /*---- Fixa rätt dropshadow ----------------*/
 }
 
 .card__favourite {
+    background: none;
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
     z-index: 1;
-    background: white;
     border: none;
-    border-radius: 50%;
-    width: 2rem; 
-    height: 2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.card__location, .card__date {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+
 .card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
 }
 
 .card__body {
-  padding: var(--gap); /*---- Fixa rätt variabel ----------------*/
+  padding: 1rem 1.5rem 1.5rem; 
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 1rem;
   justify-content: flex-start;
 }
 
@@ -490,7 +517,13 @@ label {
 
 .benefits {
     background-color: var(--mint-50);
-    padding: 2rem 0;
+    padding: 4rem 0;
+}
+
+.benefits__content p {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    max-width: 12rem;   
 }
 
 .benefits__grid {
@@ -502,7 +535,17 @@ label {
 .benefits__item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+}
+
+.benefits__item svg {
+  background-color: var(--mint-200);
+  border-radius: 50%;
+  padding: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
 }
 
 .benefits__content {
@@ -535,15 +578,11 @@ footer {
     padding: 4rem 0;
 }
 
-.brand {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 20rem;
-
+.footer__brand p {
+    max-width: 18rem;
 }
 
-.brand__social {
+.footer__brand--social {
     display: flex;
     gap: 1rem;
 }
@@ -556,12 +595,21 @@ footer {
     gap: 2rem;
 }
 
-.footer__links {
+.footer__brand {
     display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 2;
 }
 
+.footer__links {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+    min-width: 400px;
+}
 
 /* ==========================================
     Footer grid Typography & Spacing
@@ -593,5 +641,9 @@ footer nav ul {
 
 .footer__contact li {
   font-size: var(--text-sm);
+}
+
+footer p {
+    font-size: var(--text-sm);
 }
 
