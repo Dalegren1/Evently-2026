@@ -62,17 +62,18 @@
                 <a href="#" class="btn btn--primary">Utforska evenemang</a>
                 <a href="#" class="btn btn--secondary">Se helgens tips</a>
             </div>
-        </div>
-            <div class="hero__image"><!-- Döp om ifall det blir en flex wrap eller grid, vi löser det sen-->
-              <img
-                src="https://images.unsplash.com/photo-1554230095-49b8c83f10e3?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="...."
-                width="480"
-                height="480"
-                loading="eager"
-              />
             </div>
-    </div>
+
+          <div class="hero__images">
+           <img src="https://picsum.photos/seed/1/200/300" class="hero__image1">
+           <div class="hero__images__right">
+               <img src="https://picsum.photos/seed/2/200/300" class="hero__image2">
+               <img src="https://picsum.photos/seed/picsum/200/300" class="hero__image3">
+           </div>
+          </div>
+
+        </div>           
+
   </section>
 
   <!-- ========================
@@ -110,28 +111,36 @@
 
       <button type="submit" class="btn btn--primary filter-form__btn">Sök evenemang</button>
 
-   </form> 
+   </form>
+    </div> 
 
   </section>
 
   <!-- ========================
        Events Grid 
   ========================= -->
-        <section class="events" id="Evenemang">
+        <section class="events" id="events">
         <div class="container">
           <div class="events__header">
             <h2 class="events__title">Populära evenemang</h2>
             <a href="#" class="grid__link">Se alla evenemang →</a>
           </div>
 
-          <!-- Card 1 -->
+<!-- Card 1 -->
           <article class="card">
             <img src="https://picsum.photos/seed/konsert/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--konsert">Konsert</span>
-              <time class="card__date">24 maj</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-05-24">24 maj</time>
               </div>
               <h3 class="card__title">Indie Night med Nova Sun</h3>
               <p class="card__location">Pustervik, Göteborg</p>
@@ -141,11 +150,18 @@
           <!-- Card 2 -->
           <article class="card">
             <img src="https://picsum.photos/seed/marknad/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--marknad">Marknad</span>
-              <time class="card__date">25 maj</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-05-25">25 maj</time>
               </div>
               <h3 class="card__title">Vårmarknad i Slottsskogen</h3>
               <p class="card__location">Slittsskogen, Göteborg</p>
@@ -155,11 +171,18 @@
           <!-- Card 3 -->
           <article class="card">
             <img src="https://picsum.photos/seed/Workshop/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>            
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--workshop">Workshop</span>
-              <time class="card__date">27 maj</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-05-27">27 maj</time>
               </div>
               <h3 class="card__title">Keramikkurs för nybörjare</h3>
               <p class="card__location">Studio Lera, Göteborg</p>
@@ -169,11 +192,18 @@
           <!-- Card 4 -->
           <article class="card">
             <img src="https://picsum.photos/seed/Familj/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--familj">Familj</span>
-              <time class="card__date">31 maj</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-05-31">31 maj</time>
               </div>
               <h3 class="card__title">Barnteater: Den lilla sjöjungfrun</h3>
               <p class="card__location">Folkteatern, Göteborg</p>
@@ -183,11 +213,18 @@
            <!-- Card 5 -->
           <article class="card">
             <img src="https://picsum.photos/seed/sport/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--sport">Sport</span>
-              <time class="card__date">1 juni</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-06-01">1 juni</time>
               </div>
               <h3 class="card__title">Morgonlöpning & frukost</h3>
               <p class="card__location">Slottskogen, Göteborg</p>
@@ -197,11 +234,18 @@
           <!-- Card 6 -->
           <article class="card">
             <img src="https://picsum.photos/seed/konsert/400/225" alt="..." loading="lazy">
-            <button class="card__favourite" aria-label="Spara evenemang">♡</button>
+            <button class="card__favourite" aria-label="Spara evenemang">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </button>
             <div class="card__body">
               <div class="card__meta">
               <span class="card__tag card__tag--konsert">Konsert</span>
-              <time class="card__date">3 juni</time><!-- Kom ihåg att ange källa -->
+              <time class="card__date" datetime="2026-06-03">3 juni</time>
               </div>
               <h3 class="card__title">Jazzkväll på Vasateatern</h3>
               <p class="card__location">Vasateatern, Göteborg</p>
